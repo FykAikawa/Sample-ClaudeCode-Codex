@@ -1,0 +1,21 @@
+▶ 開始 thread=demo-thread
+☑ TODO 0/2: 要約フィルタを実装
+💬 要約フィルタを実装します。 完了後にテストします。
+$ python -m unittest  → OK
+$ Set-Content example.py @' (+2行)  → OK
+$ python broken.py  → 失敗 (exit 1)
+    | Traceback (most recent call last):
+    |   File "broken.py", line 1
+    |     missing_name()
+    |     ^^^^^^^^^^^^
+    | NameError: name 'missing_name' is not defined
+✎ 変更: add src/a.py, update src/b.py, delete old.py
+☑ TODO 1/2: テストを実行
+🔎 検索: Python 標準ライブラリ JSONL
+🔧 demo.read_file → OK
+🔧 demo.write_file → 失敗
+⚠ ツールの入力が不正です。
+⚠ 接続が中断しました。
+✖ 失敗: 再試行が必要です。
+☑ TODO 2/2: (未完了なし)
+■ 完了 tokens: in=1200 (cached 800) out=250

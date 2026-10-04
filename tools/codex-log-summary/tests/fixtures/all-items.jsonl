@@ -1,0 +1,23 @@
+{"type":"thread.started","thread_id":"demo-thread"}
+{"type":"turn.started"}
+{"type":"item.started","item":{"type":"todo_list","items":[{"text":"要約フィルタを実装","completed":false},{"text":"テストを実行","completed":false}]}}
+{"type":"item.completed","item":{"type":"reasoning","text":"この推論は表示しません。"}}
+{"type":"item.started","item":{"type":"agent_message","text":"途中のメッセージは表示しません。"}}
+{"type":"item.completed","item":{"type":"agent_message","text":"要約フィルタを実装します。\n完了後にテストします。"}}
+{"type":"item.started","item":{"type":"command_execution","command":"bash -lc 'python -m unittest'","status":"in_progress"}}
+{"type":"item.completed","item":{"type":"command_execution","command":"bash -lc 'python -m unittest'","status":"completed","exit_code":0,"aggregated_output":"成功時の出力は表示しません。\n"}}
+{"type":"item.completed","item":{"type":"command_execution","command":"powershell.exe -NoProfile -Command \"Set-Content example.py @'\nprint('このコードは表示しません')\n'@\"","status":"completed","exit_code":0}}
+{"type":"item.completed","item":{"type":"command_execution","command":"bash -lc 'python broken.py'","status":"failed","exit_code":1,"aggregated_output":"省略する行1\n省略する行2\nTraceback (most recent call last):\n  File \"broken.py\", line 1\n    missing_name()\n    ^^^^^^^^^^^^\nNameError: name 'missing_name' is not defined\n"}}
+{"type":"item.completed","item":{"type":"file_change","status":"completed","changes":[{"path":"src/a.py","kind":"add"},{"path":"src/b.py","kind":"update"},{"path":"old.py","kind":"delete"}]}}
+{"type":"item.updated","item":{"type":"todo_list","items":[{"text":"要約フィルタを実装","completed":true},{"text":"テストを実行","completed":false}]}}
+{"type":"item.completed","item":{"type":"todo_list","items":[{"text":"要約フィルタを実装","completed":true},{"text":"テストを実行","completed":false}]}}
+{"type":"item.completed","item":{"type":"web_search","query":"Python 標準ライブラリ JSONL"}}
+{"type":"item.completed","item":{"type":"mcp_tool_call","server":"demo","tool":"read_file","status":"completed"}}
+{"type":"item.completed","item":{"type":"mcp_tool_call","server":"demo","tool":"write_file","status":"failed"}}
+{"type":"item.completed","item":{"type":"error","message":"ツールの入力が不正です。"}}
+{"type":"error","message":"接続が中断しました。"}
+{"type":"turn.failed","error":{"message":"再試行が必要です。"}}
+{"type":"item.updated","item":{"type":"todo_list","items":[{"text":"要約フィルタを実装","completed":true},{"text":"テストを実行","completed":true}]}}
+{"type":"item.completed","item":{"type":"unknown_item","text":"未知の項目は表示しません。"}}
+{"type":"future.event"}
+{"type":"turn.completed","usage":{"input_tokens":1200,"cached_input_tokens":800,"output_tokens":250}}

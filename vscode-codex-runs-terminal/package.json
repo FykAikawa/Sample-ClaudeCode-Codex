@@ -1,0 +1,39 @@
+{
+  "name": "codex-runs-terminal",
+  "displayName": "Codex Runs Terminal",
+  "description": "新しく作成された Codex 実行ログを統合ターミナルで追従表示します。",
+  "publisher": "local",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": ["Other"],
+  "extensionKind": ["workspace"],
+  "activationEvents": [
+    "workspaceContains:.codex-runs",
+    "onStartupFinished"
+  ],
+  "main": "./src/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "codexRunsTerminal.openLog",
+        "title": "Codex Runs: Open Log in Terminal"
+      }
+    ],
+    "configuration": {
+      "title": "Codex Runs Terminal",
+      "properties": {
+        "codexRunsTerminal.autoOpen": {
+          "type": "boolean",
+          "default": true,
+          "scope": "resource",
+          "description": "新しく作成された Codex 実行ログを自動でターミナルに表示します。"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "test": "node --test test/"
+  }
+}
